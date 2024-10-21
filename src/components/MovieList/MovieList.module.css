@@ -1,0 +1,15 @@
+.movieList {
+  margin: auto;
+}
+
+.movieItem {
+  margin-bottom: 10px;
+}
+
+.movieLink {
+  text-decoration: underline;
+}
+
+.movieLink:hover {
+  color: blue;
+}

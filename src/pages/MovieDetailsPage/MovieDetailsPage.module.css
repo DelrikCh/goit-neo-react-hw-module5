@@ -1,0 +1,51 @@
+.movieDetailsContainer {
+  padding: 20px;
+}
+
+.backButton {
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.backButton:hover {
+  background-color: #e0e0e0;
+}
+
+.movieInfo {
+  display: flex;
+  gap: 20px;
+}
+
+.moviePoster img {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.movieDetails {
+  flex: 1;
+}
+
+.additionalInfo {
+  margin-top: 20px;
+  padding-top: 10px;
+  border-top: 1px solid #ccc;
+}
+
+.additionalInfo ul {
+  list-style: none;
+  padding: 0;
+}
+
+.additionalInfo li {
+  margin: 5px 0;
+}
+
+.additionalInfo a {
+  color: blue;
+  text-decoration: underline;
+}

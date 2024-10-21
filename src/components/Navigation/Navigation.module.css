@@ -1,0 +1,30 @@
+.nav {
+  background-color: #f8f8f8;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.navList {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navList li {
+  display: inline;
+  margin-right: 20px;
+}
+
+.navList a {
+  text-decoration: none;
+  color: black;
+}
+
+.navList a:hover {
+  text-decoration: underline;
+  color: black;
+}
+
+.navList .active {
+  color: red;
+}
