@@ -40,9 +40,7 @@ function MoviesPage() {
   useEffect(() => {
     const searchQuery = searchParams.get("name");
 
-    if (searchQuery) {
-      handleSearch(searchQuery);
-    }
+    handleSearch(searchQuery);
   }, [searchParams, handleSearch]);
 
   return (
@@ -51,7 +49,6 @@ function MoviesPage() {
         <input
           type="text"
           name="search"
-          value={query}
           onChange={handleQueryChange}
           className={styles.searchInput}
           placeholder="Search for movies..."
