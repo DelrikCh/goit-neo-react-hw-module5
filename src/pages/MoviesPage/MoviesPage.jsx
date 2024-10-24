@@ -9,24 +9,19 @@ function MoviesPage() {
   const [query, setQuery] = useState("");
   const [movies, setMovies] = useState([]);
 
-  const handleSearch = useCallback(
-    async (searchQuery) => {
-      if (!searchQuery) {
-        setMovies([]);
-        return;
-      }
+  const handleSearch = useCallback(async (searchQuery) => {
+    if (!searchQuery) {
+      setMovies([]);
+      return;
+    }
 
-      try {
-        const response = await searchMovies(searchQuery);
-        setMovies(response.data.results);
-
-        setSearchParams({ name: searchQuery });
-      } catch (error) {
-        console.error("Error searching for movies:", error);
-      }
-    },
-    [setSearchParams]
-  );
+    try {
+      const response = await searchMovies(searchQuery);
+      setMovies(response.data.results);
+    } catch (error) {
+      console.error("Error searching for movies:", error);
+    }
+  }, []);
 
   const handleQueryChange = (e) => {
     setQuery(e.target.value);
@@ -37,7 +32,7 @@ function MoviesPage() {
     const form = e.currentTarget;
     const searchQuery = form.elements.search.value;
 
-    handleSearch(searchQuery);
+    setSearchParams({ name: searchQuery });
 
     form.reset();
   };
